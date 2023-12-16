@@ -11,9 +11,11 @@
     "plugin:react/recommended",
     "plugin:react/jsx-runtime", // disable all rules conflict with React 17 JSX transform
     "plugin:react-hooks/recommended",
+    "plugin:jest-dom/recommended",
     "plugin:storybook/recommended",
     "prettier" // disable all rules conflict with Prettier
   ],
+  "plugins": ["jest-dom"],
   "parser": "@typescript-eslint/parser",
   "ignorePatterns": ["dist"],
   "rules": {},

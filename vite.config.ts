@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { join, resolve } from 'node:path';
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
@@ -8,7 +9,7 @@ import { peerDependencies } from './package.json';
 export default defineConfig({
   plugins: [
     react(),
-    dts(), // Output .d.ts files
+    dts({ rollupTypes: true }), // Output .d.ts files
   ],
   build: {
     target: 'esnext',
@@ -21,6 +22,14 @@ export default defineConfig({
     rollupOptions: {
       // Exclude peer dependencies from the bundle to reduce bundle size
       external: ['react/jsx-runtime', ...Object.keys(peerDependencies)],
+    },
+  },
+  test: {
+    environment: 'jsdom',
+    setupFiles: './lib/test/setup.ts',
+    coverage: {
+      all: false,
+      enabled: true,
     },
   },
 });

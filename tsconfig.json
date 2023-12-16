@@ -1,0 +1,72 @@
+{
+  "extends": [],
+  "compilerOptions": {
+    // This is a component library, so "ESNext" is a good choice. Also it requires very little down-leveling during transpilation.
+    "target": "ESNext",
+
+    // Include a list of type definitions for build-in JS APIs.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // Specify the module system for the output files. It's not required for Vite but good to have.
+    "module": "ESNext",
+
+    // The types defined in "vite/client" are included in global scope.
+    "types": ["vite/client"],
+
+    // Do not emit compiled output files, vite will take care of the that.
+    "noEmit": true,
+
+    // Vite will handle the resolution of the import paths.
+    "moduleResolution": "Bundler",
+
+    // Use the React 17 JSX transform, importing React is no longer required.
+    "jsx": "react-jsx",
+
+    // Skip the type checking for declaration files to improve performance.
+    "skipLibCheck": true,
+
+    // Allow importing modules with ".json" extension.
+    "resolveJsonModule": true,
+
+    // "declarationMap" need to be enabled to let Vite generates source map files.
+    "declaration": true,
+    "declarationMap": true,
+
+    // Importing .js files is not allowed, enable if needed.
+    "allowJs": false,
+
+    // Fix the mis-match of behaviors between ES import and CommonJS require.
+    "esModuleInterop": true,
+
+    // Allow default import from modules with no default export, i.e. you can write `import React from 'react'` instead of `import * as React from 'react'`.
+    "allowSyntheticDefaultImports": true,
+
+    // Enforce the file name casing to be consistent with development environment.
+    "forceConsistentCasingInFileNames": true,
+
+    // Ensure the run-time code does not depend on the TypeScript-only features, such as constant enum.
+    "isolatedModules": true,
+
+    // Allow importing TypeScript modules.
+    "allowImportingTsExtensions": true,
+
+    // Enfore "type" modifier for type imports.
+    "verbatimModuleSyntax": true,
+
+    // Ensure the public class field initialization is transpiled correctly to match the future JS standard.
+    "useDefineForClassFields": true,
+
+    // Type-checking options
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true
+  },
+  "include": ["./lib/**/*.ts", "./lib/**/*.tsx"],
+  "exclude": ["./lib/**/*.stories.*"]
+}

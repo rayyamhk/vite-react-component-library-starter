@@ -2,11 +2,12 @@ import React from "react";
 import { Button as MUIButton, ButtonOwnProps } from "@mui/material";
 
 export type ButtonProps = {
-    color: ButtonOwnProps["color"];
-    size: ButtonOwnProps["size"];
-    variant: ButtonOwnProps["variant"];
-    text: string;
-};
+    color: ButtonOwnProps["color"]
+    size: ButtonOwnProps["size"]
+    variant: ButtonOwnProps["variant"]
+    text: string
+}
+
 
 export const Button: React.FC<ButtonProps> = (props) => {
     return (

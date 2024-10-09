@@ -4,5 +4,6 @@
     "bracketSameLine": false,
     "singleAttributePerLine": true,
     "tabWidth": 4,
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "semi": false
 }

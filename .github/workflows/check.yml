@@ -1,32 +1,32 @@
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
-  pull_request:
+    pull_request:
 
-  workflow_dispatch:
+    workflow_dispatch:
 
 name: Check
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
+    check:
+        name: Check
+        runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
 
-    - name: Setup NodeJS
-      uses: actions/setup-node@v1
-      with:
-        node-version: "18.20.3"
+            - name: Setup NodeJS
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "18.20.3"
 
-    - name: Install All Dependencies
-      run: npm i -f
+            - name: Install All Dependencies
+              run: npm i -f
 
-    - name: Build
-      env:
-        CI: true
-      run: npm run build
+            - name: Build
+              env:
+                  CI: true
+              run: npm run build

@@ -1,5 +1,5 @@
 {
-    "extends": [],
+    "extends": "./tsconfig-paths.json",
     "compilerOptions": {
         "target": "ESNext",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],

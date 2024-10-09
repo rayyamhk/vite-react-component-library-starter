@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, type ButtonProps } from './Button';
+import { Button, ButtonProps } from './Button';
 
 const meta = {
   title: 'Components/Button',
@@ -18,7 +18,13 @@ const meta = {
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
     },
-  },
+    variant: {
+      options: ["contained", "outlined", "text"],
+      control: {
+        type: "select"
+      }
+    }
+  }
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -26,9 +32,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultProps: ButtonProps = {
-  color: 'primary',
-  size: 'medium',
-};
+  text: "Clique me",
+  color: "primary",
+  size: "medium",
+  variant: "contained"
+}
 
 export const DefaultButton: Story = {
   args: {

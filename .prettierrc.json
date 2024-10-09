@@ -1,6 +1,8 @@
 {
   "printWidth": 100,
-  "singleQuote": true,
+  "singleQuote": false,
   "bracketSameLine": false,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "tabWidth": 4,
+  "trailingComma": "none"
 }

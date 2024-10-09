@@ -1,0 +1,24 @@
+# Libs
+node_modules
+
+# Built files
+build
+
+# Index file
+index.ts
+
+# Assets
+*.css
+*.png
+*.json
+*.svg
+*.mp3
+*.ogg
+*.d.ts
+*.gif
+
+# Craco
+craco.config.js
+
+# Minified files
+*.min.js

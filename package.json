@@ -1,18 +1,15 @@
 {
-  "name": "vite-react-component-library-starter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "letalk-ui",
+  "private": false,
+  "version": "0.0.1",
   "description": "A template for creating React component libraries with Vite, Tailwind, and Storybook.",
-  "author": "rayyamhk",
+  "author": "tonim",
   "license": "MIT",
   "type": "module",
   "files": [
     "dist"
   ],
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -22,11 +19,9 @@
         "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.cjs"
+        "types": "./dist/index.d.ts"
       }
-    },
-    "./css": "./dist/style.css"
+    }
   },
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -74,8 +69,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.5",
-    "tailwind-merge": "^2.1.0",
-    "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.6.4",
@@ -84,5 +77,26 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.2",
+    "glob": "^7.2.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "18.20.3"
   }
 }

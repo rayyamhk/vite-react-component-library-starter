@@ -82,7 +82,8 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.2",
-    "glob": "^7.2.3"
+    "glob": "^7.2.3",
+    "lint-staged": "^15.2.10"
   },
   "browserslist": {
     "production": [

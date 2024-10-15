@@ -1,28 +1,71 @@
 {
-    "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslintrc.json",
-    "root": true,
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime", // disable all rules conflict with React 17 JSX transform
-        "plugin:react-hooks/recommended",
-        "plugin:jest-dom/recommended",
-        "plugin:storybook/recommended",
-        "prettier" // disable all rules conflict with Prettier
-    ],
-    "plugins": ["jest-dom"],
-    "parser": "@typescript-eslint/parser",
-    "ignorePatterns": ["dist"],
-    "rules": {},
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
-    "overrides": []
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"node": true,
+		"jest": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"standard",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 11,
+		"sourceType": "module",
+		"extraFileExtensions": [".css"]
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"jsx-a11y"
+	],
+	"rules": {
+		// Disabled because we have coding standards using a different naming convention.
+		"@typescript-eslint/camelcase": "off",
+		// Disabled because we have coding standards using a different naming convention.
+		"camelcase": "off",
+		// Disable because we use the typescript rule instead to avoid false positive errors.
+		"no-use-before-define": "off",
+		"@typescript-eslint/no-use-before-define": ["error"],
+		"indent": ["error", "tab"],
+		"@typescript-eslint/indent": ["error", "tab"],
+		"quotes": ["error", "double"],
+		"@typescript-eslint/quotes": ["error", "double"],
+		// Disabled because we have coding standards that enforce tabs usage.
+		"no-tabs": "off",
+		// Disabled because in Typescript don't need PropTypes.
+		"react/prop-types": "off",
+		"no-unused-expressions": "error",
+		// Disabled because most of the time we don't need to know a component DisplayName.
+		"react/display-name": "off",
+		// Disabled because we use TypeInference to avoid messing code with lots of type files.
+		"@typescript-eslint/explicit-function-return-type": "off",
+		// Disabled because we use TypeInference to avoid messing code with lots of type files.
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		// Disabled because we have coding standards to always create classes to specific contexts.
+		"@typescript-eslint/no-extraneous-class": "off",
+		// Disabled because we have coding standards to avoid commas/semicolons between properties.
+		"@typescript-eslint/member-delimiter-style": "off",
+		"@typescript-eslint/no-unused-vars": "error",
+		"object-curly-spacing": ["error", "always"],
+		"semi": ["error", "never"],
+		"no-trailing-spaces": ["error"],
+		"space-before-function-paren": ["error", "always"],
+		"import/no-duplicates": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		},
+		"react": {
+			"version": "detect"
+		}
+	},
+	"ignorePatterns": ["**/*.stories.ts", "**/*.stories.tsx"]
 }

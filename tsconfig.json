@@ -30,6 +30,6 @@
         "noUnusedLocals": false,
         "noUnusedParameters": true
     },
-    "include": ["./lib/**/*.ts", "./lib/**/*.tsx"],
+    "include": ["./lib/**/*.ts", "./lib/**/*.tsx", "./vite.config.ts"],
     "exclude": ["./lib/**/*.stories.*"]
 }

@@ -17,8 +17,5 @@ index.ts
 *.d.ts
 *.gif
 
-# Craco
-craco.config.js
-
 # Minified files
 *.min.js

@@ -5,7 +5,7 @@ node_modules
 build
 
 # Index file
-index.ts
+index.tsx
 
 # Assets
 *.css

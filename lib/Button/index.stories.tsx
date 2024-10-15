@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react"
-
 import { Button, ButtonProps } from "@/Button"
 
 const meta = {
@@ -35,20 +34,20 @@ const defaultProps: ButtonProps = {
 	text: "Clique me",
 	color: "primary",
 	size: "medium",
-	variant: "contained",
-};
+	variant: "contained"
+}
 
 export const DefaultButton: Story = {
 	args: {
 		...defaultProps,
-		children: "Click Me!",
-	},
+		children: "Click Me!"
+	}
 };
 
 export const DisabledButton: Story = {
 	args: {
 		...defaultProps,
 		children: "Click Me!",
-		disabled: true,
-	},
-};
+		disabled: true
+	}
+}

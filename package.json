@@ -61,6 +61,7 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.5",
 		"eslint-plugin-storybook": "^0.6.15",
+		"git-commit-msg-linter": "^5.0.8",
 		"jsdom": "^23.0.1",
 		"postcss": "^8.4.32",
 		"react": "^18.2.0",
@@ -79,7 +80,6 @@
 		"@emotion/react": "^11.13.3",
 		"@emotion/styled": "^11.13.0",
 		"@mui/material": "^6.1.2",
-		"git-commit-msg-linter": "^5.0.8",
 		"glob": "^7.2.3"
 	},
 	"browserslist": {

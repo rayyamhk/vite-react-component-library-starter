@@ -52,8 +52,7 @@
 		"object-curly-spacing": ["error", "always"],
 		"semi": ["error", "never"],
 		"no-trailing-spaces": ["error"],
-		"space-before-function-paren": ["error", "always"],
-		"import/no-duplicates": "off"
+		"space-before-function-paren": ["error", "always"]
 	},
 	"settings": {
 		"import/resolver": {

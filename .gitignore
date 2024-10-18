@@ -2,3 +2,5 @@ node_modules
 dist
 storybook-static
 coverage
+
+.idea

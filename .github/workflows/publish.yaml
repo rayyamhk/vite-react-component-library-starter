@@ -1,0 +1,26 @@
+name: Publish Package to npmjs
+
+on:
+    release:
+        types: [published]
+jobs:
+    build:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18.20.3"
+                  registry-url: 'https://registry.npmjs.org'
+
+            - name: Install dependencies
+              run: npm i -f
+
+            - name: Publish to NPM
+              run: npm publish --provenance --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

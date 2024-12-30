@@ -1,0 +1,21 @@
+# Libs
+node_modules
+
+# Built files
+build
+
+# Index file
+index.tsx
+
+# Assets
+*.css
+*.png
+*.json
+*.svg
+*.mp3
+*.ogg
+*.d.ts
+*.gif
+
+# Minified files
+*.min.js
